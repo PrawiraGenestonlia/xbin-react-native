@@ -1,11 +1,13 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
-
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createStackNavigator } from 'react-navigation-stack';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+//
+import { LoginScreen } from '../screens';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -66,6 +68,7 @@ SettingsStack.navigationOptions = {
 };
 
 SettingsStack.path = '';
+
 
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
