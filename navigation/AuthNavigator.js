@@ -16,11 +16,13 @@ const AuthStack = createStackNavigator(
   },
   {
     ...config,
-    initialRouteName: 'Login'
+    initialRouteName: 'Login',
+    headerMode: 'none',
   }
 );
 
 AuthStack.navigationOptions = {
+  headerVisible: false,
   headerStyle: {
     backgroundColor: '#ffffff',
   },

@@ -6,7 +6,7 @@ export default styles =
       flex: 1,
       alignItems: 'center',
     },
-    text: {
-      marginVertical: 16,
+    intro: {
+      marginTop: 135,
     },
   });
