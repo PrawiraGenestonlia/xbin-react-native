@@ -7,22 +7,61 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 //
-import { LoginScreen } from '../screens';
+import { LoginScreen, SettingScreen, MyxBin } from '../screens';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
   default: {},
 });
 
-const HomeStack = createStackNavigator(
+// const HomeStack = createStackNavigator(
+//   {
+//     Home: HomeScreen,
+//   },
+//   config
+// );
+
+// HomeStack.navigationOptions = {
+//   tabBarLabel: 'Home',
+//   tabBarIcon: ({ focused }) => (
+//     <TabBarIcon
+//       focused={focused}
+//       name={
+//         Platform.OS === 'ios'
+//           ? `ios-information-circle${focused ? '' : '-outline'}`
+//           : 'md-information-circle'
+//       }
+//     />
+//   ),
+// };
+
+// HomeStack.path = '';
+
+// const LinksStack = createStackNavigator(
+//   {
+//     Links: LinksScreen,
+//   },
+//   config
+// );
+
+// LinksStack.navigationOptions = {
+//   tabBarLabel: 'Links',
+//   tabBarIcon: ({ focused }) => (
+//     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+//   ),
+// };
+
+// LinksStack.path = '';
+
+const MyxBinStack = createStackNavigator(
   {
-    Home: HomeScreen,
+    MyxBin: MyxBin,
   },
   config
 );
 
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+MyxBinStack.navigationOptions = {
+  tabBarLabel: 'My xBin',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -35,27 +74,13 @@ HomeStack.navigationOptions = {
   ),
 };
 
-HomeStack.path = '';
+MyxBinStack.path = '';
 
-const LinksStack = createStackNavigator(
-  {
-    Links: LinksScreen,
-  },
-  config
-);
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
-  ),
-};
-
-LinksStack.path = '';
 
 const SettingsStack = createStackNavigator(
   {
-    Settings: SettingsScreen,
+    Settings: SettingScreen,
   },
   config
 );
@@ -71,8 +96,9 @@ SettingsStack.path = '';
 
 
 const tabNavigator = createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
+  // HomeStack,
+  // LinksStack,
+  MyxBinStack,
   SettingsStack,
 });
 

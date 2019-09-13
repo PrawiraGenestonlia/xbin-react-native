@@ -36,9 +36,10 @@ function AuthLoadingScreen(props) {
       const userToken = '';
       // userToken = await AsyncStorage.getItem('userToken');
       AsyncStorage.getItem('userToken', (err, result) => {
-        console.log(result);
+        // console.log(result);
+        navigation.navigate(result ? 'Main' : 'Auth');
       });
-      navigation.navigate(userToken ? 'Main' : 'Auth');
+      // navigation.navigate(userToken ? 'Main' : 'Auth');
     } catch (err) {
       console.log(err);
     }

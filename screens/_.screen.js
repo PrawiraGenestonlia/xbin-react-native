@@ -1,17 +1,18 @@
-import * as React from 'react';
+import React from 'react';
 import { StyleSheet } from 'react-native';
 import globalstyle from './global.stylesheet';
 import { Button, Layout, Text } from 'react-native-ui-kitten';
 
-export default function HomeScreen() {
+export default function _name(props) {
+  const { navigation } = props;
   return (
     <Layout style={globalstyle.container}>
-      <Text style={globalstyle.text} category='h4'>Welcome to UI Kitten</Text>
-      <Button>BUTTON</Button>
+      <Text style={globalstyle.text} category='h4'>PageName</Text>
+
     </Layout>
   );
 }
 
-HomeScreen.navigationOptions = {
-  title: 'Home',
+_name.navigationOptions = {
+  title: '_name',
 };
