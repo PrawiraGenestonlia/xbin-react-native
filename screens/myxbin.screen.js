@@ -10,7 +10,7 @@ const _clickAddNew = () => {
 
 export default function myxbin(props) {
   const { navigation } = props;
-  const [xbinData, setxBinData] = useState();
+  // const [xbinData, setxBinData] = useState();   
 
   const _addData = () => {
     Alert.alert("Add");
