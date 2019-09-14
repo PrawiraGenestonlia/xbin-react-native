@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-export default () =>
+const style =
   StyleSheet.create({
     login: {
       flex: 1,
@@ -24,3 +24,5 @@ export default () =>
       fontStyle: 'italic'
     }
   });
+
+export default style;

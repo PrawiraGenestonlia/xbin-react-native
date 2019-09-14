@@ -14,7 +14,7 @@ export default function AuthLoadingScreen(props) {
     _bootstrapAsync();
   }, [])
 
-  _bootstrapAsync = async () => {
+  const _bootstrapAsync = async () => {
     try {
       const userToken = '';
       // userToken = await AsyncStorage.getItem('userToken');
