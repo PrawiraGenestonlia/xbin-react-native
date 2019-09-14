@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ImageBackground, View, Alert, Button, AsyncStorage } from 'react-native';
+import { ImageBackground, View, Alert, Button, AsyncStorage, Image, TextInput } from 'react-native';
 import { Layout, Text, Input } from 'react-native-ui-kitten';
 import globalstyle from './global.stylesheet';
 import style from './login.stylesheet';
@@ -34,7 +34,7 @@ export default function LoginScreen(props) {
           <Text style={globalstyle.intro} category='h4'>Welcome back!</Text>
           <Text style={globalstyle.p}>Welcome to the xBin! Please login to your account.</Text>
           <View style={style.login}>
-            <Text style={style.datainput}>email</Text>
+            <TextInput placeholder="Email" autoCapitalize="none" autoCorrect={false} style={{ textAlign: 'center' }} value={email} onChangeText={(text) => setEmail(text)} />
             <Text style={style.datainput}>password</Text>
             {isSignup ?
               <Button title="Sign up" onPress={_clickSignUp}></Button> :
