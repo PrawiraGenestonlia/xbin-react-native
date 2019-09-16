@@ -16,10 +16,12 @@ export default function LoginScreen(props) {
     setIsSignup(!isSignup);
   }
   const _clickSignUp = () => {
+    //api
     Alert.alert("Sign up", "You have signed up successfully");
   }
 
   const _clickLogin = () => {
+    //api
     Alert.alert("Login", "You have successfully login");
     AsyncStorage.setItem('userToken', '12345');
     navigation.navigate('AuthLoading');
