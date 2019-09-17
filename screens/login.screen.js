@@ -21,10 +21,16 @@ export default function LoginScreen(props) {
   }
 
   const _clickLogin = () => {
-    //api
-    Alert.alert("Login", "You have successfully login");
-    AsyncStorage.setItem('userToken', '12345');
-    navigation.navigate('AuthLoading');
+    //axios
+
+    //if res 200
+    if (1) {
+      //api
+      Alert.alert("Login", "You have successfully login");
+      AsyncStorage.setItem('userToken', '12345');
+      navigation.navigate('AuthLoading');
+    }
+
   }
 
 
