@@ -21,7 +21,7 @@ export default function LoginScreen(props) {
   }
 
   const _clickLogin = () => {
-    //axios
+    //axios to backend
 
     //if res 200
     if (1) {
